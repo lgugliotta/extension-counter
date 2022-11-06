@@ -104,7 +104,7 @@ dist
 .tern-port
 
 # IDE's
-.idea
+.idea/
 
 # Local
 *.local.js
