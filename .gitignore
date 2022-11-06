@@ -105,3 +105,6 @@ dist
 
 # IDE's
 .idea
+
+# Local
+*.local.js
