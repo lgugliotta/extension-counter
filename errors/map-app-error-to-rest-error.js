@@ -21,14 +21,6 @@ const mapAppErrorToRestError = (err, res) => {
         message = 'Internal Server Error';
         name = 'InternalServerError';
         break;
-      case Errors.CONFLICT_ERROR:
-        message = err.message;
-        name = 'ConflictError';
-        break;
-      case Errors.UNAVAILABLE_ERROR:
-        message = err.message ? err.message : 'Service Unavailable';
-        name = 'ServiceUnavailableError';
-        break;
       case Errors.NOT_FOUND:
         message = err.message;
         name = 'NotFoundError';
