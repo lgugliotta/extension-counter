@@ -32,6 +32,31 @@ npm run dev
 npm run test
 ```
 
+## Local Environment
+You need to create a new file under **config** folder called *index.local.js* with following code:
+
+```sh
+const dev = {
+  NAME: 'Extension Counter',
+  ENV: 'DEVELOPMENT',
+  LOG_LEVEL: 'DEBUG',
+  PORT: 3000,
+  GITHUB: {
+    URL: 'https://api.github.com/',
+    TOKEN: ''
+  }
+}
+
+module.exports = {
+  dev
+}
+```
+Previously you need to create a new Personal acces Token (Classic) in GitHub
+[Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+Then copy the token and paste in GITHUB.TOKEN
+
+
 ## Endpoint
 
 ```sh
