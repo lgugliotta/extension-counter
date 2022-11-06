@@ -1,6 +1,7 @@
 const axios = require('axios');
 const { config } = require('../config')
 const { logger } = require("../utils");
+const { AppError, Errors, ErrorStatusCodes } = require("../errors");
 
 /**
  * Github API requests config
@@ -23,9 +24,12 @@ const getTree = async (url) => {
     logger.log(`Getting tree form ${url}`, 'info');
     return (await gitHubApi.get(url)).data
   } catch (e) {
-    //TODO: handle error here
+    if (e.response?.status == 404) {
+      logger.log('Repo not found: ' + e, 'info');
+      throw new AppError(Errors.NOT_FOUND, 'Repo not found');
+    }
     logger.log('Error getting tree from GitHub: ' + e, 'error');
-    throw new Error(e)
+    throw new AppError(Errors.INTERNAL_ERROR, 'Error getting tree from GitHub');
   }
 }
 
