@@ -22,6 +22,6 @@ describe('Log request middleware tests', () => {
     const nextMock = jest.fn();
     logRequestMiddleware.printRequestAndPayload(undefined, {}, nextMock);
     expect(loggerSpy).toBeCalledTimes(1);
-    expect(loggerSpy). toBeCalledWith("printRequestAndPayload: TypeError: Cannot read property 'query' of undefined", 'error')
+    expect(loggerSpy).toBeCalledWith("printRequestAndPayload: TypeError: Cannot read property 'query' of undefined", 'error')
   });
 });
