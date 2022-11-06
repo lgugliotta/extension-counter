@@ -32,6 +32,34 @@ npm run dev
 npm run test
 ```
 
+## Endpoint
+
+```sh
+POST /repo/extension-count HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+
+Body:
+{
+    "repoURL": "https://github.com/argoproj/argo-site"
+}
+
+Example Response:
+{
+    "md": 194,
+    "svg": 216,
+    "gif": 1,
+    "png": 11,
+    "mdx": 4,
+    "js": 34,
+    "json": 1,
+    "scss": 3,
+    "woff": 2,
+    "woff2": 2,
+    "lock": 1
+}
+```
+
 ## Author
 
 👤 **Leandro Gugliotta**
