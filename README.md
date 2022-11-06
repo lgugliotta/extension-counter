@@ -64,7 +64,6 @@ Example Response:
 
 👤 **Leandro Gugliotta**
 
-* Website: leandrogugliotta.com
 * Github: [@lgugliotta](https://github.com/lgugliotta)
 
 ## Show your support
