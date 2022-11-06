@@ -5,6 +5,9 @@ const {AppError, Errors} = require("../../errors");
 const url = '/repos/OWNER/REPO/git/trees/121212121';
 
 describe('Github service tests', () => {
+  /**
+   * This test doesn't have coverage, but it passes, is an issue with async
+   */
   it('Should get a tree', async () => {
     gitHubService.getTree = jest.fn().mockResolvedValue(treeMock)
     const result = await gitHubService.getTree(url);
